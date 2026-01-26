@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: '맑은고딕', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1 {
+  padding: 10px 0px;
+}
+
+h2 {
+  color: #333;
+  line-height: 60px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  background: #333;
+}
+
+.footer>address {
+  color: #fff;
+  font-style: normal;
+}
+
+/* 메인서식 */
+main {
+  margin: 15px 10px;
+}
+
+/* nav서식 */
+nav {
+  background: #0F2854;
+}
+
+nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  padding: 10px 0px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  background: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Goods 테이블 서식 */
+.data_list {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #cbc4ff;
+  table-layout: fixed;
+  box-sizing: border-box;
+}
+
+.data_list th {
+  background: #D9EAFD;
+}
+
+.data_list th,
+.data_list td {
+  border: 1px solid #d9e2eb;
+  line-height: 40px;
+}
+
+.data_list td {
+  text-align: center;
+}
+
+.data_list button {
+  border: none;
+  background: #BCCCDC;
+  padding: 5px 8px;
+  margin-right: 10px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.data_list button:hover {
+  background: rgb(15, 40, 84, .5);
+}
+
+.new_list {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.new_list button {
+  border: none;
+  background: #BCCCDC;
+  padding: 5px 8px;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* 상품 등록 / 수정  */
+.create>h2 {
+  text-align: center;
+}
+
+.create {
+  width: 100%;
+}
+
+.create .form_box {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.create .form_p {
+  border: 1px solid #ddd;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.create .form_p label {
+  background: #D9EAFD;
+  padding: 10px 0px;
+  color: #0F2854;
+  font-weight: 400;
+  width: 20%;
+  text-indent: 10px;
+}
+
+.create .form_p input {
+  text-indent: 10px;
+  border: none;
+  width: 70%;
+}
+
+.create .form_p select {
+  text-indent: 10px;
+  border: none;
+  width: 70%;
+}
+
+.create button {
+  margin-top: 10px;
+  border: none;
+  background: #BCCCDC;
+  padding: 5px 8px;
+  margin-right: 10px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.create button:hover {
+  background: rgb(15, 40, 84, .5);
+}
+
+.create button {
+  border: none
+}
+
+/* 문의하기 양식 폼 */
+/* 크롬 / 사파리 자동완성 배경 제거 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  /* 글자색 */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+.qna {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.qna_form {
+  width: 900px;
+  margin: 0 auto;
+  background: #EEAECA;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.form_group {
+  padding: 68px 40px 24px 40px;
+  border: none;
+}
+
+.form_group>legend {
+  display: none;
+}
+
+.form_group>h2 {
+  margin: 0px;
+  font-size: 60px;
+  text-align: right;
+  color: #333;
+}
+
+.form_group>.form_inner {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 좌측 입력 묶음 */
+.form_inner .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_inner .left input {
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+.form_inner .left label>span {
+  display: inline-block;
+  width: 100px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form_inner .left ::placeholder {
+  color: rgba(255, 255, 255, .3);
+}
+
+.name_box,
+.tel_box,
+.email_box {
+  width: 400px;
+  padding: 18px 0px;
+  margin-bottom: 9px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.email_box {
+  margin-bottom: 0px !important;
+}
+
+/* 우측 입력 묶음 */
+.form_inner .right {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 18px;
+  width: 400px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.form_inner .right textarea {
+  width: 80%;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+.form_inner .right ::placeholder {
+  padding-top: 5px;
+  color: rgba(255, 255, 255, .3);
+}
+
+.form_inner .right label {
+  /* margin-top: 18px;
+      padding: 10px; */
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* 개인정보 처리 방침 / sned 버튼 */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 44px 40px 26px 40px;
+  border: none;
+}
+
+.bottom label {
+  padding-top: 15px;
+  padding-left: 10px;
+  color: #FFF;
+  font-weight: 500;
+}
+
+.bottom input[type=submit] {
+  width: 400px;
+  padding: 15px;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.qnalist_button {
+  transform: translateX(805px);
+  border: none;
+  background: #BCCCDC;
+  padding: 5px 8px;
+  margin-top: 30px;
+  margin-right: 10px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.qnalist_button:hover {
+  background: rgb(15, 40, 84, .5);
+}
+
+/* 로그인 서식 */
+.login h2 {
+  text-align: center;
+}
+
+.login_form {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.login label {
+  display: none;
+}
+
+.login p {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.login input {
+  text-indent: 10px;
+  width: 100%;
+  border: 1px solid #BCCCDC;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.login input[type="submit"] {
+  text-indent: 0px;
+  border: none;
+  background: #BCCCDC;
+  padding: 10px 0px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: rgb(15, 40, 84, .5);
+}
+.login .search_box a{
+  position: relative;
+  padding:0 15px;
+}
+.login .search_box a::after{
+  content:'|';
+  position:absolute;
+  right:-5px;
+  color:#333;
+}
+.login .search_box a:last-child:after{
+  content:'';
+}
+.login .search_box {
+  display: flex;
+  justify-content: space-around;
+}
