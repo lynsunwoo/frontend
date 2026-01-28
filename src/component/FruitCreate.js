@@ -29,7 +29,7 @@ function FruitCreate() {
   const handleSubmit = (e) =>{
     e.preventDefault();
 
-    axios.post('http://localhost:9070/fruit', form)
+    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/fruit', form)
     .then(()=>{
       alert('상품이 등록 되었습니다.');
       // setFruitsCount( count => count + 1 )
@@ -95,5 +95,6 @@ function FruitCreate() {
     </main>
   )
 }
+
 
 export default FruitCreate;
