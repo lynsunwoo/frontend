@@ -26,7 +26,7 @@ function CustomerCreate() {
     const handleSubmit = (e) =>{
         e.preventDefault();
 
-        axios.post('http://localhost:9070/customer', form)
+        axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/customer', form)
         .then(()=>{
             alert('상품이 등록 되었습니다.');
             // setCustomerCount( count => count + 1 );
