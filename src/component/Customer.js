@@ -39,7 +39,7 @@ function Customer() {
   ================================================== */
   const deleteData = (id) => {
     if (window.confirm('정말로 삭제하시겠습니까?')) {
-      axios.delete(`http://localhost:9070/customer/${id}`)
+      axios.delete(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/customer/${id}`)
         .then(() => {
           alert('데이터가 성공적으로 삭제되었습니다.');
           loadData();
@@ -200,3 +200,4 @@ const filteredData = data.filter(item =>
 
 
 export default Customer;
+
