@@ -33,7 +33,7 @@ function BooksCreate() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:9070/books', form)
+    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/books', form)
       .then(() => {
         alert('상품이 등록 되었습니다.');
         // setBooksCount(count => count + 1)
@@ -155,5 +155,6 @@ function BooksCreate() {
     </main>
   )
 }
+
 
 export default BooksCreate;
