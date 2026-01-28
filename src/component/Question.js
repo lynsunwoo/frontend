@@ -42,7 +42,7 @@ function Question() {
     }
 
     //5. 유효성이 통과되면 전송하기 
-    axios.post('http://localhost:9070/api/question', formData)
+    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/api/question', formData)
       .then(() => { //통신이 성공적으로 이루어지면
         alert('문의가 등록되었습니다');
         setQuestionCount(count => count + 1); // 카운트 값이 증가
@@ -158,5 +158,6 @@ function Question() {
     </main>
   )
 }
+
 
 export default Question;
