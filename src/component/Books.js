@@ -38,7 +38,7 @@ function Books() {
   //삭제를 위한 함수
   const deleteData = (num) => {
     if (window.confirm('정말로 삭제하시겠습니까?')) {
-      axios.delete(`http://localhost:9070/books/${num}`)
+      axios.delete(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/books/${num}`)
         .then(() => {
           alert('데이터가 성공적으로 삭제되었습니다.');
           loadData();
@@ -248,3 +248,4 @@ function Books() {
 
 
 export default Books;
+
