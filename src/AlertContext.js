@@ -13,25 +13,25 @@ export function AlertProvider({ children }) {
 
   //페이지 로딩시 1번만 데이터 불러옴.
   useEffect(() => {
-    axios.get('http://localhost:9070/user-count')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/user-count')
       .then(res => setJoinCount(res.data.count));
 
-    axios.get('http://localhost:9070/goods')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/goods')
       .then(res => setGoodsCount(res.data.length));
 
-    axios.get('http://localhost:9070/fruit')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/fruit')
       .then(res => setFruitsCount(res.data.length));
 
-    axios.get('http://localhost:9070/noodle')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/noodle')
       .then(res => setNoodleCount(res.data.length));
 
-    axios.get('http://localhost:9070/books')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/books')
       .then(res => setBooksCount(res.data.length));
 
-    axios.get('http://localhost:9070/customer')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/customer')
       .then(res => setCustomerCount(res.data.length));
 
-    axios.get('http://localhost:9070/api/question')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/question')
       .then(res => setQuestionCount(res.data.length));
   }, []);
 
@@ -49,4 +49,5 @@ export function AlertProvider({ children }) {
       {children}
     </AlertContext.Provider>
   );
+
 }
