@@ -22,7 +22,7 @@ function Books() {
   //1. 상품 리스트 출력(조회) 방식
   const loadData = () => {
     //비동기 통신 사용
-    axios.get(`http://localhost:9070/books`)
+    axios.get(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/books`)
       .then(res => {
         setData(res.data)
         setBooksCount(res.data.length)
@@ -245,5 +245,6 @@ function Books() {
     </main>
   )
 }
+
 
 export default Books;
