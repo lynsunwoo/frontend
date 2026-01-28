@@ -41,7 +41,7 @@ function Join() {
     }
 
     try { //DB서버와 통신이 잘되면 POST방식으로 ID, PW를 넘긴다
-      await axios.post('http://localhost:9070/join', {
+      await axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/join', {
         username: form.username,
         password: form.password
       });
@@ -115,5 +115,6 @@ function Join() {
     </main>
   )
 }
+
 
 export default Join;
