@@ -15,7 +15,7 @@ function QuestionList() {
 
   //2. 문의하기에 등록된 글 가져오기
   const loadData = () => {
-    axios.get('http://localhost:9070/api/question')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/api/question')
       .then(res => {
         setData(res.data);
         // setQuestionCount(res.data.length);
@@ -78,6 +78,7 @@ function QuestionList() {
     </main>
   );
 }
+
 
 
 export default QuestionList;
