@@ -29,7 +29,7 @@ function NoodleCreate() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`http://localhost:9070/noodle`, form)
+    axios.post(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/noodle`, form)
       .then((res) => {
         alert('상품이 등록 되었습니다.');
         // setNoodleCount( count => count + 1 );
@@ -108,5 +108,6 @@ function NoodleCreate() {
     </main>
   )
 }
+
 
 export default NoodleCreate;
