@@ -22,7 +22,7 @@ function Customer() {
   4️ 서버 통신 (조회)
 ================================================== */
   const loadData = () => {
-    axios.get(`http://localhost:9070/customer`)
+    axios.get(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/customer`)
       .then(res => {
         setData(res.data);
         setCustomerCount(res.data.length);
@@ -197,5 +197,6 @@ const filteredData = data.filter(item =>
     </main>
   )
 }
+
 
 export default Customer;
