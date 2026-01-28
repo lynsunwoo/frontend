@@ -19,7 +19,7 @@ function FruitUpdate() {
 
   //2. 서버측에 넘길 데이터 (num)을 통신해서 성공, 실패 여부 출력
   useEffect(()=>{
-    axios.get(`http://localhost:9070/fruit/${num}`)
+    axios.get(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/fruit/${num}`)
     //성공이면 출력
     .then(res=>{
       console.log('서버응답값:', res.data);
@@ -42,7 +42,7 @@ function FruitUpdate() {
   const handleSubmit =(e)=>{
     e.preventDefault();
 
-    axios.put(`http://localhost:9070/fruit/fruitupdate/${num}`,{
+    axios.put(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/fruit/fruitupdate/${num}`,{
       name: form.name,
       price: form.price,
       color: form.color,
@@ -91,5 +91,6 @@ function FruitUpdate() {
     </main>
   )
 }
+
 
 export default FruitUpdate;
