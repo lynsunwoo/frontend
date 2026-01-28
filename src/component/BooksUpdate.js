@@ -20,7 +20,7 @@ function BooksUpdate() {
 
   //서버측에 넘길 데이터(num)을 통신해서 성공, 실패 여부 출력
   useEffect(()=>{
-    axios.get(`http://localhost:9070/books/${num}`)
+    axios.get(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/books/${num}`)
     .then(res=>{
       console.log('서버응답값 :', res.data)
       setForm(res.data);
@@ -40,7 +40,7 @@ function BooksUpdate() {
   const handleSubmit=(e)=>{
     e.preventDefault();
 
-    axios.put(`http://localhost:9070/books/booksupdate/${num}`,{
+    axios.put(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/books/booksupdate/${num}`,{
       name: form.name,
       area1: form.area1,
       area2: form.area2,
@@ -107,5 +107,6 @@ function BooksUpdate() {
     </main>
   )
 }
+
 
 export default BooksUpdate;
