@@ -21,7 +21,7 @@ function Noodle() {
 
   //서버통신 (조회)
   const loadData = () => {
-    axios.get(`http://localhost:9070/noodle`)
+    axios.get(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/noodle`)
       .then(res => {
         setData(res.data)
         // setNoodleCount(count => count + 1)
@@ -38,7 +38,7 @@ function Noodle() {
   //삭제를 위한 (deleteData)
   const deleteData = (num) => {
     if (window.confirm('정말로 삭제 하시겠습니까?')) {
-      axios.delete(`http://localhost:9070/noodle/${num}`)
+      axios.delete(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/noodle/${num}`)
         .then(() => {
           alert('데이터가 성공적으로 삭제되었습니다.');
           loadData();// 다시 목록 띄우기
@@ -243,5 +243,6 @@ function Noodle() {
     </main>
   )
 }
+
 
 export default Noodle;
