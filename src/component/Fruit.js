@@ -65,7 +65,7 @@ function Fruit() {
   //선택한 상품 삭제하기
   const deleteData = (num) => {
     if (window.confirm('정말 삭제하시겠습니까?')) {
-      axios.delete(`http://localhost:9070/fruit/${num}`)
+      axios.delete(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/fruit/${num}`)
         .then(() => {
           alert('삭제되었습니다.');
           loadData(); // 삭제후 다시 불러오기
@@ -243,3 +243,4 @@ function Fruit() {
 
 
 export default Fruit;
+
