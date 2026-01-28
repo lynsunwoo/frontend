@@ -20,7 +20,7 @@ function GoodsUpdate() {
   //컴포넌트가 마운트될 때, 해당 상품 정보를 서버에서 조회
 
   useEffect(()=>{
-    axios.get(`http://localhost:9070/goods/${g_code}`)
+    axios.get(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/goods/${g_code}`)
     //성공이면 출력
     .then(res=>{
       console.log('서버 응답값:', res.data);
@@ -43,7 +43,7 @@ function GoodsUpdate() {
   const handleSubmit =(e)=>{
     e.preventDefault();
 
-    axios.put(`http://localhost:9070/goods/goodsupdate/${g_code}`,{
+    axios.put(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/goods/goodsupdate/${g_code}`,{
       g_name: form.g_name,
       g_cost: form.g_cost
     })
@@ -81,5 +81,6 @@ function GoodsUpdate() {
     </main>
   )
 }
+
 
 export default GoodsUpdate;
