@@ -28,7 +28,7 @@ function Goods() {
     4️ 서버 통신 (조회)
   ================================================== */
   const loadData = () => {
-    axios.get('http://localhost:9070/goods')
+    axios.get('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/goods')
       .then(res => {
         setData(res.data);
         setGoodsCount(res.data.length);
@@ -250,5 +250,6 @@ function Goods() {
     </main>
   )
 }
+
 
 export default Goods;
