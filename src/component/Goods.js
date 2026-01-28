@@ -46,7 +46,7 @@ function Goods() {
   ================================================== */
   const deleteData = (g_code) => {
     if (window.confirm('정말로 삭제 하시겠습니까?')) {
-      axios.delete(`http://localhost:9070/goods/${g_code}`)
+      axios.delete(`https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/goods/${g_code}`)
         .then(() => {
           alert('데이터가 성공적으로 삭제되었습니다.');
           loadData(); // 삭제 후 목록 재조회
@@ -253,3 +253,4 @@ function Goods() {
 
 
 export default Goods;
+
