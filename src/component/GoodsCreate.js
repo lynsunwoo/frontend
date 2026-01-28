@@ -27,7 +27,7 @@ function GoodsCreate() {
   const handleSubmit = (e) => {
     e.preventDefault(); // 새로고침 방지
 
-    axios.post('http://localhost:9070/goods', form)
+    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/goods', form)
       .then(() => {
         alert('상품이 등록 되었습니다.');
         // setGoodsCount(count => count + 1 );
@@ -72,3 +72,4 @@ function GoodsCreate() {
 }
 
 export default GoodsCreate;
+
